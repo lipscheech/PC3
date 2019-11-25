@@ -13,7 +13,7 @@ public class HibernateUtil {
 	public static SessionFactory getSessionFactory() {
 		if (sessionFactory == null) {
 // loads configuration and mappings
-			Configuration configuration = new Configuration().configure();
+			Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
 			configuration.addPackage("br.com.prog3.aula9.model");
 			configuration.addAnnotatedClass(Veiculo.class);
 			configuration.addAnnotatedClass(Multa.class);
